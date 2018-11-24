@@ -1,10 +1,21 @@
 const express = require( 'express') ;
 const app = express( ) ;
 
-var wa = function() {
+
+app.set('port', (process.env.PORT || 5000))
+
+app.get('/', function(request, response) {
+  response.send('Hello World!')
+})
+
+app.listen(app.get('port'), function() {
+  console.log("Node app is running at localhost:" + app.get('port'))
+})
+
+//var wa = function() {
 
 //  Scope.
-    var self = this;
+//    var self = this;
 
 
     /*  ================================================================  */
@@ -13,7 +24,7 @@ var wa = function() {
 
     /**
      *  Set up server IP address and port # using env variables/defaults.
-     */
+    
     self.setupVariables = function() {
     	self.app = express();
         //  Set the environment variables we need.
@@ -32,7 +43,8 @@ var wa = function() {
         //  Start the app on the specific interface (and port).
         self.app.listen(self.port, self.ipaddress, function() {
             console.log('%s: Node server started on %s:%d ...',
-                        Date(Date.now() ), self.ipaddress, self.port);
+                    	self.ipaddress, 
+                    	self.port);
         });
         self.app.get( '/ping', ( request, response) => {
  						response.send( 'pong');
@@ -44,4 +56,4 @@ var sb = new wa();
 sb.setupVariables();
 sb.start();
 
-//app.listen( 8080, 'localhost') ;
+//app.listen( 8080, 'localhost') ; */
