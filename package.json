@@ -1,0 +1,30 @@
+
+  "name": "webapp",
+  "version": "1.0.0",
+  "description": "Testing Heroku",
+  "keywords": [
+    "Node.js",
+    "application"
+  ],
+  "author": "CarloV <cviana66@gmail,com> (http://www.SharingBeer.com/)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cviana66/webapp.git"
+  },
+  "engines": {
+    "node": ">= 8.0.0",
+    "npm": ">= 6.0.0"
+  },
+  "dependencies": {
+    "express": "^4.16.4"
+  },
+  "devDependencies": {},
+  "bundleDependencies": [],
+  "private": true,
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "bugs": {},
+  "license": "ISC"
+}
